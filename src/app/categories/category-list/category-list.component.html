@@ -1,0 +1,14 @@
+
+<a>
+  <div *ngFor="let category of categories; let i = index">
+    <ul>
+      <li>
+        <a (click)="onClick(category)">{{ category.name }} </a>
+        <app-subcategory></app-subcategory>
+      </li>
+    </ul>
+
+  </div>
+</a>
+<app-category></app-category>
+

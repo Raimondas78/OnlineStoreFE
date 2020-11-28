@@ -1,0 +1,29 @@
+<header>
+  <div style="background-image: url('https://images.ctfassets.net/hrltx12pl8hq/5GaLeZJlLyOiQC4gOA0qUM/a0398c237e9744ade8b072f99349e07a/shutterstock_152461202_thumb.jpg?fit=fill&w=480&h=270');" >
+    <h1  style="text-align: center" >
+      9 AMATAI
+    </h1>
+    <p align="center" style="font-size: 25px" style="margin-bottom: 0px">El. parduotuvė </p>
+  </div>
+  <nav class="navbar navbar-expand-md navbar-dark static-top bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li [routerLinkActive]="['active']" class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li [routerLinkActive]="['active']" class="nav-item">
+          <a class="nav-link" [routerLink]="['/items']">Items</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li [routerLinkActive]="['active']" class="nav-item">
+          <a class="nav-link"  [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
