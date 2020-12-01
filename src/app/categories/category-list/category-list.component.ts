@@ -3,7 +3,8 @@ import {Category} from '../../interfaces/category';
 import {CategoryService} from '../../services/category.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {switchMap} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
+import {ParentCategory} from '../../interfaces/parent-category';
 
 
 @Component({
@@ -12,26 +13,15 @@ import {Observable} from 'rxjs';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
-  categories: Category[] = [];
+  parentCategories: ParentCategory[];
   category: Category;
-  subcategory: Category[] = [];
-  constructor(private categoryService: CategoryService, private router: ActivatedRoute) { }
+  subcategories: Category[] = [];
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.getData();
   }
   getData(): void{
-    this.categoryService.getAllCategories().subscribe(data => this.categories = data);
+    this.categoryService.getAllCategories().subscribe(data => this.parentCategories = data);
   }
-
-  onClick(category: Category): void{
-    this.getSubcategories(category);
-  }
-  getSubcategories(category: Category): void{
-    this.categoryService.getAllSubcategoriesByCategory(category.id).subscribe(subcategory => this.subcategory = subcategory);
-  }
-   getSubcategoryList(id: number): void{
-    this.categoryService.getAllSubcategoriesByCategory(id);
-   }
-
 }

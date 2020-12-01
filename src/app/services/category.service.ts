@@ -1,21 +1,24 @@
-import { Injectable } from '@angular/core';
+import {Injectable, Output, EventEmitter} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Category} from '../interfaces/category';
+import {ParentCategory} from '../interfaces/parent-category';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CategoryService {
+  parentCategorySelected = new EventEmitter<ParentCategory>();
+
   private baseUrl = environment.apiUrl;
-  category: Category[] = [];
+  parentCategories: ParentCategory[] = [];
 
   constructor(private http: HttpClient) { }
 
-  getAllCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.baseUrl + '/categories');
+  getAllCategories(): Observable<ParentCategory[]> {
+    return this.http.get<ParentCategory[]>(this.baseUrl + '/categories');
   }
 
   getAllSubcategoriesByCategory(id: number): Observable<Category[]> {

@@ -1,14 +1,12 @@
-
-<a>
-  <div *ngFor="let category of categories; let i = index">
-    <ul>
-      <li>
-        <a (click)="onClick(category)">{{ category.name }} </a>
-        <app-subcategory></app-subcategory>
-      </li>
-    </ul>
-
+<h3>KATEGORIJOS</h3>
+<div class="row">
+  <div class="col-xs-12">
+    <app-category
+      *ngFor="let parentCategory of parentCategories"
+      [parentCategory]="parentCategory">{{parentCategory.name}}</app-category>
   </div>
-</a>
-<app-category></app-category>
+  <div class="col-xs-12">
+    <app-subcategory></app-subcategory>
+  </div>
+</div>
 

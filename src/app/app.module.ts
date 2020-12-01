@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { SubcategoryComponent } from './categories/subcategory/subcategory.component';
 import { CategoryComponent } from './categories/category/category.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CategoryComponent } from './categories/category/category.component';
     CategoryListComponent,
     HeaderComponent,
     SubcategoryComponent,
-    CategoryComponent
+    CategoryComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
