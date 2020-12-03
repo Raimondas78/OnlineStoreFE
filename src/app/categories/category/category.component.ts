@@ -14,7 +14,7 @@ import {ParentCategory} from '../../interfaces/parent-category';
 export class CategoryComponent implements OnInit {
   @Input() parentCategory: ParentCategory;
   subcategories: Category[];
-
+  isActive = false;
   constructor(private categoryService: CategoryService ) { }
 
   ngOnInit(): void {
@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
 
   onSelected(id): void {
     this.getSubcategoryList(id);
+    this.isActive = !this.isActive;
   }
   getSubcategoryList(id): void{
     this.categoryService.getAllSubcategoriesByCategory(id).subscribe(subcategories => this.subcategories = subcategories);

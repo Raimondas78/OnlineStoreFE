@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CategoryListComponent} from './categories/category-list/category-list.component';
-import {SubcategoryComponent} from './categories/subcategory/subcategory.component';
 import {CategoriesComponent} from './categories/categories.component';
+import {HomeComponent} from './home/home.component';
+import {AdminComponent} from './admin/admin.component';
+import {LoginComponent} from './login/login.component';
+import {CategoryListComponent} from './categories/category-list/category-list.component';
 
 const routes: Routes = [
-  { path: '', component: CategoriesComponent }
+  { path: '', component: CategoryListComponent },
+  { path: 'admin', component: AdminComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

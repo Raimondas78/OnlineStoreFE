@@ -10,19 +10,18 @@ import {CategoryService} from '../../services/category.service';
   styleUrls: ['./subcategory.component.css']
 })
 export class SubcategoryComponent implements OnInit {
-  @Input() parentCategory: ParentCategory;
-  subcategories: Category[];
+  @Input() subcategories: Category[];
   constructor(private categoryService: CategoryService) {
   }
 
   ngOnInit(): void {}
 
-  onSelected(id): void {
-    this.getSubcategoryList(id);
-  }
-  getSubcategoryList(id): void{
-    this.categoryService.getAllSubcategoriesByCategory(id).subscribe(subcategories => this.subcategories = subcategories);
-  }
+  // onSelected(id): void {
+  //   this.getSubcategoryList(id);
+  // }
+  // getSubcategoryList(id): void{
+  //   this.categoryService.getAllSubcategoriesByCategory(id).subscribe(subcategories => this.subcategories = subcategories);
+  // }
 }
 
 

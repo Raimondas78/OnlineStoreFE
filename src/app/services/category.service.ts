@@ -11,9 +11,11 @@ import {ParentCategory} from '../interfaces/parent-category';
 
 export class CategoryService {
   parentCategorySelected = new EventEmitter<ParentCategory>();
+  subcategorySelected = new EventEmitter<Category>();
 
   private baseUrl = environment.apiUrl;
   parentCategories: ParentCategory[] = [];
+  subcategories: Category[] = [];
 
   constructor(private http: HttpClient) { }
 

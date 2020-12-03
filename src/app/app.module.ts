@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { SubcategoryComponent } from './categories/subcategory/subcategory.component';
 import { CategoryComponent } from './categories/category/category.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CategoriesComponent } from './categories/categories.component';
     HeaderComponent,
     SubcategoryComponent,
     CategoryComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    HomeComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

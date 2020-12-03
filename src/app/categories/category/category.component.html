@@ -1,4 +1,4 @@
-  <a
+<a
   href="#"
   class="list-group-item clearfix"
   (click)="onSelected(parentCategory.id)">
@@ -6,10 +6,15 @@
     <h4 class="list-group-item-heading">{{ parentCategory.name }}</h4>
   </div>
   <span class="pull-right"></span>
-  </a>
-<a>
-  <div *ngFor="let sub of subcategories">{{sub.name}}</div>
+
 </a>
+<div *ngIf="isActive">
+  <app-subcategory [subcategories]="subcategories"></app-subcategory>
+</div>
+
+<!--<a>-->
+<!--  <div *ngFor="let sub of subcategories">{{sub.name}}</div>-->
+<!--</a>-->
 <!--      <app-subcategory-->
 <!--        *ngFor="let subCategory of parentCategory.subcategoryList"-->
 <!--        [parentCategory]="parentCategory">{{subCategory.name}}</app-subcategory>-->
