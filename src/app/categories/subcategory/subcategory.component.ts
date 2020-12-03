@@ -10,8 +10,8 @@ import {CategoryService} from '../../services/category.service';
   styleUrls: ['./subcategory.component.css']
 })
 export class SubcategoryComponent implements OnInit {
-  @Input() subcategories: Category[];
-  constructor(private categoryService: CategoryService) {
+  @Input() subcategory: Category;
+  constructor() {
   }
 
   ngOnInit(): void {}

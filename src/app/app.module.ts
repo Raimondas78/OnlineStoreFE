@@ -12,6 +12,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { SubcategoryListComponent } from './categories/subcategory-list/subcategory-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './login/login.component';
     CategoriesComponent,
     HomeComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    SubcategoryListComponent
   ],
   imports: [
     BrowserModule,

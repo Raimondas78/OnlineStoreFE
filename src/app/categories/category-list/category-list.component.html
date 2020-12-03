@@ -1,16 +1,11 @@
 <div>
-  <div class="row">
+  <div class="row" style="margin-left: 25px">
     <div class="col-xs-12">
       <span class="pull-right"></span>
       <app-category
         *ngFor="let parentCategory of parentCategories"
         [parentCategory]="parentCategory">{{parentCategory.name}}</app-category>
     </div>
-    <div class="row">
-    <div class="col-xs-12">
-<!--      <app-subcategory></app-subcategory>-->
-    </div>
-  </div>
   </div>
 </div>
 
